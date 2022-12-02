@@ -14,9 +14,9 @@ Content-Type: application/json
 
 # page_size is optional. Default 1000. Size for S3 page. One page = One pyspark task.
 {
-  "n": 1000,
+  "n": 100,
   "bucket": "s3-nord-challenge-data",
-  "page_size": 1000
+  "page_size": 100
 }
 
 ###

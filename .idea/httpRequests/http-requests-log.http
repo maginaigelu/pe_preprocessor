@@ -1,0 +1,493 @@
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T175237.200.json
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 100,
+  "bucket": "s3-nord-challenge-data",
+  "page_size": 100
+}
+
+<> 2022-12-02T175234.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T174653.200.json
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 100,
+  "bucket": "s3-nord-challenge-data",
+  "page_size": 100
+}
+
+<> 2022-12-02T174633.200.json
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 1000,
+  "bucket": "s3-nord-challenge-data",
+  "page_size": 1000
+}
+
+<> 2022-12-02T160708.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T143041.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T143012.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T143010.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T142936.200.json
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T142931.200.json
+
+###
+
+GET http://127.0.0.1:8000/files_metadata/3
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T142237.500.txt
+
+###
+
+GET http://127.0.0.1:8000/files_metadata/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T142232.200.json
+
+###
+
+GET http://127.0.0.1:8000/files_metadata/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T142037.404.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/3
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T141855.200.json
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T141847.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T141416.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T141411.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T141403.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T141018.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T140938.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T140907.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T140848.200.json
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T140821.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T140524.200.json
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T140516.200.json
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T140106.500.txt
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T140054.500.txt
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T135558.500.txt
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T135544.500.txt
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T135342.500.txt
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T135305.500.txt
+
+###
+
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T135139.500.txt
+
+###
+
+POST http://127.0.0.1:8000/tasks_from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T134741.404.json
+
+###
+
+POST http://127.0.0.1:8000/tasks_from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T134735.404.json
+
+###
+
+POST http://127.0.0.1:8000/tasks_from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T134724.404.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T134708.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T134513.404.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T134502.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T134453.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T133025.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T133024.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T125357.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T125143.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T124955.500.txt
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T124458.422.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T124037.422.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T123022.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T123021.200.json
+
+###
+
+POST http://127.0.0.1:8000/tasks_from_s3/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "n": 5,
+  "bucket": "s3-nord-challenge-data"
+}
+
+<> 2022-12-02T123004.200.json
+
+###
+
+GET http://127.0.0.1:8000/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-12-02T122728.200.json
+
+###
+

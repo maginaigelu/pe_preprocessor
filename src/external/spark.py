@@ -37,7 +37,7 @@ class BasePySparkClient:
 
     @staticmethod
     def extract(df, list_tasks, fmt='binaryFile'):
-        return df.read.format(fmt).load(pyspark.SparkContext.parallelize(list_tasks))
+        return df.read.format(fmt).load(list_tasks)
 
     def transform(self, df, *, table_name, fields, hash_field='hash'):
         df = df.withColumn(hash_field, hash_it(col('content'))).dropDuplicates([hash_field])
