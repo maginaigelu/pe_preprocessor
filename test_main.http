@@ -1,0 +1,55 @@
+# curl -X POST --location "http://127.0.0.1:8000/from_s3/"
+#    -H "Accept: application/json"
+#    -H "Content-Type: application/json"
+#    -d "{
+#          \"n\": 20000,
+#          \"bucket\": \"s3-nord-challenge-data\"
+#        }"
+
+#Start processing n tasks from s3
+# Returns {{task_id}}
+POST http://127.0.0.1:8000/from_s3/
+Accept: application/json
+Content-Type: application/json
+
+# page_size is optional. Default 1000. Size for S3 page. One page = One pyspark task.
+{
+  "n": 1000,
+  "bucket": "s3-nord-challenge-data",
+  "page_size": 1000
+}
+
+###
+
+# curl -X GET --location "http://127.0.0.1:8000/tasks/"
+#    -H "Accept: application/json"
+#    -H "Content-Type: application/json"
+
+# Get all tasks statuses
+GET http://127.0.0.1:8000/tasks/
+Accept: application/json
+Content-Type: application/json
+
+###
+
+# curl -X GET --location "http://127.0.0.1:8000/tasks/{{task_id}}"
+#    -H "Accept: application/json"
+#    -H "Content-Type: application/json"
+
+# Get current task status
+GET http://127.0.0.1:8000/tasks/{{task_id}}
+Accept: application/json
+Content-Type: application/json
+
+###
+
+# curl -X GET --location "http://127.0.0.1:8000/files_metadata/"
+#    -H "Accept: application/json"
+#    -H "Content-Type: application/json"
+
+# Get processed files metadata
+GET http://127.0.0.1:8000/files_metadata/
+Accept: application/json
+Content-Type: application/json
+
+###

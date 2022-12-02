@@ -1,0 +1,68 @@
+version: '3.8'
+
+x-base-app: &base-app
+  build:
+    dockerfile: ./ci/images/DockerfileApp
+    context: ../..
+  image: pe_preprocessor
+  volumes:
+    - ../..:/home/httpd/app
+  networks:
+    - pe_preprocessor
+
+services:
+
+  app:
+    container_name: app
+    ports:
+      - '8000:8000'
+    command: uvicorn main:app --host 0.0.0.0 --reload
+    <<: *base-app
+
+  dramatiq:
+    container_name: dramatiq
+    command: dramatiq dramatiq_tasks.tasks  --processes 2 --threads 1
+    <<: *base-app
+
+  pyspark:
+    container_name: pyspark
+    <<: *base-app
+    ports:
+      - '8080:8080'
+      - '7077:7077'
+    working_dir: /home/httpd/spark
+    environment:
+      - SPARK_MASTER_HOST=0.0.0.0
+    command: bash -c './sbin/start-master.sh && ./sbin/start-worker.sh spark://0.0.0.0:7077 && tail -f ./logs/*.out'
+
+  postgres:
+    container_name: postgres
+    image: postgres:15-bullseye
+    environment:
+      POSTGRES_DB: "pe_preprocessor"
+      POSTGRES_USER: "pe_preprocessor"
+      POSTGRES_PASSWORD: "pe_preprocessor"
+    ports:
+      - '5432:5432'
+    networks:
+      - pe_preprocessor
+
+  rabbitmq:
+    image: rabbitmq:alpine
+    container_name: rabbitmq
+    environment:
+        RABBITMQ_DEFAULT_USER: "rabbitmq"
+        RABBITMQ_DEFAULT_PASS: "rabbitmq"
+        RABBITMQ_DEFAULT_VHOST: "rabbitmq"
+    healthcheck:
+        timeout: 5s
+        interval: 10s
+        retries: 5
+        test: [ "CMD", "rabbitmqctl", "cluster_status" ]
+    networks:
+      - pe_preprocessor
+
+
+networks:
+    pe_preprocessor:
+        name: ${PE_PREPROCESSOR_NETWORK:-pe_preprocessor_nw}
