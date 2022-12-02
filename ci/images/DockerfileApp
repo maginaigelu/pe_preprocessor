@@ -1,0 +1,28 @@
+FROM python:3.10-bullseye
+
+ENV SRC=/home/httpd/app/src
+
+ENV SPARK_HOME=/home/httpd/spark
+
+RUN apt update && apt install -y \
+  default-jdk \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /home/httpd/app
+
+RUN wget -O spark.tgz https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
+RUN tar xfz spark.tgz -C /home/httpd
+RUN rm -rf spark.tgz
+RUN mv /home/httpd/spark-3.3.1-bin-hadoop3 $SPARK_HOME
+
+WORKDIR $SPARK_HOME/jars
+
+RUN wget https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.11.901/aws-java-sdk-bundle-1.11.901.jar
+RUN wget https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.3.1/hadoop-aws-3.3.1.jar
+RUN wget https://repo1.maven.org/maven2/org/postgresql/postgresql/42.5.0/postgresql-42.5.0.jar
+
+WORKDIR $SRC
+
+COPY ./src/ $SRC
+
+RUN python3 -m pip install -r /home/httpd/app/src/.meta/packages
